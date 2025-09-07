@@ -1,74 +1,43 @@
-# 🧑‍💼 Employee Management System  (SAIL Internship)
+# Employee Management System (Java + MySQL)
 
-A Java-based GUI desktop application that allows you to manage employee records efficiently. Built using **Java Swing** for the interface and **MySQL** for database operations.
-
----
-
-## 📌 Features
-
-- 🔐 Secure login system  
-- ➕ Add new employee records  
-- 👁️ View all employee details  
-- 📝 Update existing employee data  
-- ❌ Delete employee records  
-- 🗃️ JDBC connectivity with MySQL  
-- 📅 Integrated calendar (via jCalendar)
+A desktop-based **Employee Management System** built using **Java Swing** and **MySQL**.  
+This application allows users to log in, add new employees, view records, and remove employees.  
+It demonstrates the integration of Java GUI with a relational database using **JDBC**.
 
 ---
 
-## 🛠️ Tech Stack
-
-- **Language**: Java  
-- **Frontend**: Java Swing  
-- **Backend**: MySQL  
-- **Libraries**:
-  - `jcalendar-1.4.jar`
-  - `rs2xml.jar`
-- **IDE Recommended**: IntelliJ IDEA / Eclipse  
-- **Build Tool**: Manual via terminal or IDE
+## Features
+- Secure login system (default: `admin` / `admin`).
+- Add employee details (name, DOB, salary, address, phone, email, etc.).
+- View all employees in a tabular format.
+- Remove employees by ID.
+- MySQL backend for persistent storage.
+- Java Swing frontend for GUI.
 
 ---
 
-## 🧑‍💻 How to Run the Application
+## Prerequisites
+Make sure you have the following installed:
+- [Java JDK 17+]
+- [MySQL Server]
+- Git (to clone the repository).
 
-### 1. Clone the Repository
+---
+
+## Setup Instructions
+
+### 1. Clone this repository
 ```bash
-
-git clone https://github.com/Subhangi69/Employee-Management-System.git
+git clone https://github.com/your-username/Employee-Management-System.git
 cd Employee-Management-System
 ```
-## 2. Set Up the MySQL Database
-### Open MySQL and run the following commands to create the database and table:
+### 2. Setup the database
+Run the provided SQL script to create the required schema and tables:
 ```bash
-   CREATE DATABASE IF NOT EXISTS employeedb;
-USE employeedb;
-
-CREATE TABLE employee (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(100),
-  age INT,
-  address VARCHAR(255),
-  salary DOUBLE
-  -- Add more columns as per your application
-);
+mysql -u root -p < sql/setup.sql
 ```
-### 2.Update your conn.java file with your database name, username, and password:
-```bash
-Connection c = DriverManager.getConnection(
-  "jdbc:mysql://localhost:3306/employeedb", 
-  "root", 
-  "your_password"
-);
-```
-## 3. Compile the Project
-### Navigate to the src directory and run:
-```bash
-javac -cp ".;../libraries/jcalendar-1.4.jar;../libraries/rs2xml.jar" employee/management/system/*.java
-```
-##  4. Run the Application
-```bash
-java -cp ".;../libraries/jcalendar-1.4.jar;../libraries/rs2xml.jar" employee.management.system.Splash
-```
-
-## The application will launch with a splash screen and then take you to the login window.
+This will:
+- Create database employeemanagement
+- Create table login with a default admin user (admin / admin)
+- Create table employee for storing employee details
 
