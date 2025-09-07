@@ -1,4 +1,4 @@
-# Employee Management System (SAIL Internship)
+# 🧑‍💼 Employee Management System (SAIL Internship)
 
 A desktop-based **Employee Management System** built using **Java Swing** and **MySQL**.  
 This application allows users to log in, add new employees, view records, and remove employees.  
@@ -6,7 +6,7 @@ It demonstrates the integration of Java GUI with a relational database using **J
 
 ---
 
-## Features
+## 🚀 Features
 - Secure login system (default: `admin` / `admin`).
 - Add employee details (name, DOB, salary, address, phone, email, etc.).
 - View all employees in a tabular format.
@@ -54,7 +54,7 @@ Make sure the following JARs are inside the lib/ folder:
 - jcalendar-1.4.jar
 - rs2xml.jar
 - mysql-connector-java-8.0.33.jar
-### Running the Application
+### 💻 Running the Application
 Compile
 ```bash
 javac -d bin -cp "lib\jcalendar-1.4.jar;lib\rs2xml.jar;lib\mysql-connector-j-8.0.33.jar" src\employee\management\system\*.java
@@ -66,5 +66,10 @@ java -cp "bin;lib\jcalendar-1.4.jar;lib\rs2xml.jar;lib\mysql-connector-j-8.0.33.
 Login Credentials
 - Username: admin
 - Password: admin
+
+   ## 📺 Video -
+  [![Watch the demo](https://img.youtube.com/vi/OZrUnsi4qHk/0.jpg)](https://youtu.be/OZrUnsi4qHk)
+
+  
 
 
