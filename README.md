@@ -11,11 +11,8 @@ It demonstrates the integration of Java GUI with a relational database using **J
 - Add employee details (name, DOB, salary, address, phone, email, etc.).
 - View all employees in a tabular format.
 - Remove employees by ID.
-## Tech Stack
-Java Swing – UI
-- MySQL – Database
-- JDBC – Database connectivity
-- JCalendar & rs2xml – Date picker & table model utilities
+- MySQL backend for persistent storage.
+- Java Swing frontend for GUI.
 
 ---
 
@@ -43,4 +40,29 @@ This will:
 - Create database employeemanagement
 - Create table login with a default admin user (admin / admin)
 - Create table employee for storing employee details
+### 3. Configure database connection
+Create a db.properties file in the project root
+```bash
+db.url=jdbc:mysql://localhost:3306/employeemanagement
+db.user=root
+db.password=NewRootPass123!
+```
+### 4. Add required libraries
+Make sure the following JARs are inside the lib/ folder:
+- jcalendar-1.4.jar
+- rs2xml.jar
+- mysql-connector-java-8.0.33.jar
+### Running the Application
+Compile
+```bash
+javac -d bin -cp "lib\jcalendar-1.4.jar;lib\rs2xml.jar;lib\mysql-connector-j-8.0.33.jar" src\employee\management\system\*.java
+```
+Run
+```bash
+java -cp "bin;lib\jcalendar-1.4.jar;lib\rs2xml.jar;lib\mysql-connector-j-8.0.33.jar" employee.management.system.Login
+```
+Login Credentials
+Username: admin
+Password: admin
+
 
