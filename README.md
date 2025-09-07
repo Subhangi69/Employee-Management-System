@@ -1,4 +1,4 @@
-# Employee Management System (Java + MySQL)
+# Employee Management System (SAIL Internship)
 
 A desktop-based **Employee Management System** built using **Java Swing** and **MySQL**.  
 This application allows users to log in, add new employees, view records, and remove employees.  
